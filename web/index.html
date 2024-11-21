@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web_of_Nie</title>
+    <style>
+        /* 页面整体样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(120deg, #a2d2ff, #cdb4db, #ffb5a7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative; /* 确保粒子特效显示在页面上 */
+        }
+
+        /* 页面容器 */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 90%;
+            height: 80%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* 左侧栏 */
+        .left {
+            width: 40%;
+            background: linear-gradient(to bottom, #ffb5a7, #ffcad4);
+            color: #f8f9fa;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .left img:hover {
+            transform: rotate(15deg);
+        }
+
+        .left hr {
+            border: 0;
+            height: 1px;
+            background: #fff;
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        /* 右侧栏 */
+        .right {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .top-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 0;
+        }
+
+        .top-section a {
+            background: rgba(255, 255, 255, 0.8);
+            color: #6d6875;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            padding: 10px;
+            width: 120px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .top-section a:hover {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .top-section img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: transform 0.5s;
+        }
+
+        .bottom-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* 随机句子样式 */
+        .random-quote {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6f61;
+            text-align: center;
+            margin-top: 10px;
+            height: auto;
+            line-height: 1.5;
+        }
+
+        /* 粒子效果 */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            pointer-events: none;
+            animation: move 2s linear forwards;
+            z-index: -1; /* 确保粒子效果在最底层 */
+        }
+
+        @keyframes move {
+            0% {
+                opacity: 1;
+                transform: scale(0) translate3d(0, 0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(1) translate3d(100vw, 100vh, 0);
+            }
+        }
+
+        /* 光圈特效 */
+        .circle-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(0);
+            animation: circle-animation 0.6s ease-out forwards;
+        }
+
+        @keyframes circle-animation {
+            0% {
+                transform: scale(0);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(4); /* 光圈大小 */
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 左侧栏 -->
+    <div class="left">
+        <img src="../image/2.png" alt="Profile Picture">
+        <hr>
+        <div>
+            姓名：怒火船长<br>
+            签名：<img src="../image/3.png" alt="Signature" style="width: 200px; height: 100px;"><br>
+            年龄：18<br>
+            大学：<a href="关山口职业技术学院.html" target="_blank">关山口职业技术学院</a><br>
+            爱好：打cs2，极限国度，超级鸡马，荒野乱斗<br>
+            现状：学习卷不过，游戏打不赢，只知道吃喝睡
+        </div>
+    </div>
+
+    <!-- 右侧栏 -->
+    <div class="right">
+        <div class="top-section">
+            <a href="youxi.html" target="_blank">
+                <img src="../image/9.png" alt="示例图片1">
+                <span>休闲时刻</span>
+                <span>学习压力大？</span>
+                <span>来把cs2！</span>
+            </a>
+            <a href="xiaoyuan.html" target="_blank">
+                <img src="../image/15.jpg" alt="示例图片2">
+                <span>校园生活</span>
+                <span>在关山口与你相“喻”</span>
+            </a>
+            <a href="dushu.html" target="_blank">
+                <img src="../image/13.jpg" alt="示例图片3">
+                <span>读万卷书</span>
+                <span>内心充盈者</span>
+                <span>独行也如众</span>
+            </a>
+            <a href="xinglu.html" target="_blank">
+                <img src="../image/14.jpg" alt="示例图片4">
+                <span>行万里路</span>
+                <span>生活不止眼前的苟且，还有诗和远方</span>
+            </a>
+        </div>
+
+        <!-- 每日一句部分 -->
+        <div style="text-align: center; font-weight: bold; color: #ff6f61; font-size: 1.2rem;">每日一句：</div>
+        <div class="random-quote" id="quote"></div>
+
+        <div class="bottom-section">
+            <a href="xinglu.html" target="_blank">
+                <span>寝室链接</span>
+            </a>
+        </div>
+        <div class="bottom-section">
+            <a href="xinglu.html" target="_blank">
+                <span>班级链接</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 粒子效果和点击光圈 JS -->
+<script>
+    // 创建粒子
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.width = Math.random() * 15 + 5 + 'px'; // 粒子大小
+        particle.style.height = particle.style.width; // 保证粒子是圆形
+        particle.style.left = `${Math.random() * window.innerWidth}px`; // 粒子随机水平位置
+        particle.style.top = `${Math.random() * window.innerHeight}px`; // 粒子随机垂直位置
+        document.body.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 2000); // 粒子持续2秒
+    }
+
+    // 自动生成粒子
+    setInterval(createParticle, 200); // 每200ms生成一个粒子
+
+    // 创建光圈效果
+    function createCircleEffect(event) {
+        const circle = document.createElement('div');
+        circle.classList.add('circle-effect');
+        const size = Math.random() * 50 + 50; // 光圈的大小
+        circle.style.width = `${size}px`;
+        circle.style.height = `${size}px`;
+        circle.style.left = `${event.clientX - size / 2}px`; // 设置光圈位置
+        circle.style.top = `${event.clientY - size / 2}px`;
+        document.body.appendChild(circle);
+
+        setTimeout(() => {
+            circle.remove();
+        }, 600); // 光圈持续时间
+    }
+    // 点击时创建光圈特效
+    window.addEventListener('click', function(event) {
+        createCircleEffect(event);
+    });
+
+
+    // 显示随机句子
+    const quotes = [
+        "自信人生二百年，会当水击三千里",
+        "永远相信美好即将发生。",
+        "只有不断追求，才能成就不平凡的自己。",
+        "历尽千帆，归来仍是少年。",
+        "为天地立心，为生民立命。"
+    ];
+
+    function showRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const quoteElement = document.getElementById('quote');
+        quoteElement.textContent = quotes[randomIndex];
+    }
+
+    window.onload = showRandomQuote;
+
+    // 点击时创建光圈特效
+    window.addEventListener('click', function(event) {
+        createCircleEffect(event);
+    });
+</script>
+
+</body>
+</html>

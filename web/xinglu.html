@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行万里路</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C3E50; /* 新背景色 */
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #87CEEB;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .image-gallery img {
+            width: 400px;
+            height: 200px;  /* 设置固定高度 */
+            object-fit: cover;  /* 保持图片的宽高比，裁剪图片以填充容器 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* 媒体查询：移动设备适配 */
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr; /* 单列布局 */
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 返回按钮 -->
+<a href="index.html" class="back-button">返回首页</a>
+
+<h1>行万里路</h1>
+<p>探索世界，收获美好回忆</p>
+
+<div class="image-gallery">
+    <div class="container">
+        <img src="../image/14.jpg" alt="探索未知的城市">
+        <div class="caption">古德寺</div>
+        <div>古德寺保存着哥特式基督教教堂、罗马式天主教教堂、拜占庭式东正教堂、伊斯兰风格的清真寺风格，作为一座极具特色的寺庙，它和传统寺庙黄瓦红柱、飞檐翘角的大殿迥然不同。</div>
+    </div>
+    <div class="container">
+        <img src="../image/18.jpg" alt="山水之间的宁静">
+        <div class="caption">东湖</div>
+        <div>东湖是与杭州西湖齐名的风景游览胜地，湖光山色，相映成趣，花木扶琉，绿树葱茏。杭州西湖以其妩媚多姿取胜，东湖则以楚国雄风，粗犷豪放见长。</div>
+    </div>
+    <div class="container">
+        <img src="../image/22.jpg" alt="沿着海岸线奔跑">
+        <div class="caption">武汉博物馆</div>
+        <div>感受历史的厚重和文化的熏陶，在博物馆触摸到时间的流逝，感叹个体的渺小。</div>
+    </div>
+    <div class="container">
+        <img src="../image/23.jpg" alt="夜晚的星空与灯光">
+        <div class="caption">武功山</div>
+        <div>海拔1918.3米，峰顶地势平坦，夏季气候凉爽，是观赏日出、高山草甸、神秘佛光、迷幻云海、悬崖峭壁和进香拜佛的最佳景区。</div>
+    </div>
+</div>
+</body>
+</html>

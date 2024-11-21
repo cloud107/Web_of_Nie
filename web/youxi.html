@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>休闲时刻</title>
+    <style>
+        /* 页面和背景样式 */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a2e; /* 深色背景 */
+            overflow: hidden; /* 隐藏超出边界的元素 */
+            color: #fff;
+            position: relative; /* 为了定位返回按钮 */
+        }
+
+        /* 返回按钮样式 */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #ffeb3b;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none; /* 去除链接下划线 */
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #fff176;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1; /* 确保内容在星星效果之上 */
+        }
+
+        h1 {
+            color: #ffeb3b;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+            gap: 20px; /* 图片之间的间距 */
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 150px; /* 统一设置图片高度 */
+            max-width: 250px;
+            object-fit: cover; /* 保持图片比例并裁剪溢出部分 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .caption {
+            margin-top: 10px;
+            color: #ffeb3b;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* 星星样式 */
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkling 2s infinite ease-in-out;
+        }
+
+        /* 星星闪烁效果 */
+        @keyframes twinkling {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 返回按钮 -->
+<a href="index.html" class="back-button">返回首页</a>
+
+<div class="container">
+
+    <h1>欢迎来到休闲时刻</h1>
+    <div class="grid">
+        <!-- 图片1 -->
+        <div class="grid-item">
+            <img src="../image/9.png" alt="图片1">
+            <div class="caption">《极限国度》一款以极限运动为主题的游戏，让每一个热爱探索的心都能体验极限运动的快感</div>
+        </div>
+
+        <!-- 图片2 -->
+        <div class="grid-item">
+            <img src="../image/10.jpg" alt="图片2">
+            <div class="caption">《荒野乱斗》一款快节奏轻量级的moba类游戏</div>
+        </div>
+
+        <!-- 图片3 -->
+        <div class="grid-item">
+            <img src="../image/11.png" alt="图片3">
+            <div class="caption">《cs2》中文名《反恐精英》给你真实的枪战体验</div>
+        </div>
+
+        <!-- 图片4 -->
+        <div class="grid-item">
+            <img src="../image/12.png" alt="图片4">
+            <div class="caption">《超级鸡马》玩法简单却能创造无限欢乐</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 动态创建50个星星
+    for (let i = 0; i < 50; i++) {
+        let star = document.createElement("div");
+        star.className = "star";
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+        star.style.animationDelay = `${Math.random() * 2}s`; /* 随机闪烁延迟 */
+        document.body.appendChild(star);
+    }
+</script>
+
+</body>
+</html>

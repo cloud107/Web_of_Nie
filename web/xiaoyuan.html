@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>校园生活</title>
+    <style>
+        /* 页面背景和字体样式 */
+        body {
+            font-family: 'Arial', sans-serif; /* 设置字体 */
+            background: linear-gradient(to top, #2c3e50, #3498db); /* 深蓝色到浅蓝色渐变 */
+            color: #333; /* 文字颜色 */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* 为了定位返回按钮 */
+        }
+
+        h1 {
+            color: #ffffff; /* 标题字体颜色 */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+            margin: 0;
+            border-bottom: 2px solid #ddd; /* 标题底部边框 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 标题文字阴影 */
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #f1f1f1; /* 配文文字颜色 */
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #3498db;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none; /* 去除链接下划线 */
+        }
+
+        .back-button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: rgba(255, 255, 255, 0.7); /* 半透明白色背景 */
+            border-radius: 10px; /* 圆角效果 */
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 图片容器阴影 */
+            backdrop-filter: blur(10px); /* 模糊背景效果 */
+            transition: transform 0.3s ease-in-out; /* 平滑过渡效果 */
+        }
+
+        .image-container:hover {
+            transform: scale(1.05); /* 鼠标悬停时放大效果 */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 300px; /* 固定高度 */
+            object-fit: cover; /* 保持图片比例，填充容器 */
+            border-radius: 10px; /* 图片圆角效果 */
+            aspect-ratio: 16 / 9; /* 强制宽高比，避免图片变形 */
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 返回按钮 -->
+<a href="index.html" class="back-button">返回首页</a>
+
+<h1>探索我的校园生活</h1>
+<p>欢迎来到我的校园生活页面，这里将展示我在校园中的一些日常活动和美好瞬间。请跟随我一起感受这段充满活力与青春的时光！</p>
+
+<div class="image-container">
+    <img src="../image/6.png" alt="校园风光">
+    <p class="caption">有幸见到奥运冠军郑钦文、昌雅妮、孙梦雅。</p>
+</div>
+
+<div class="image-container">
+    <img src="../image/15.jpg" alt="课堂学习">
+    <p class="caption">西十二窗外的树叶在阳光的照耀下晶莹剔透。</p>
+</div>
+
+<div class="image-container">
+    <img src="../image/16.jpg" alt="运动健身">
+    <p class="caption">开学典礼上初识华中大，唱响校歌</p>
+</div>
+
+<div class="image-container">
+    <img src="../image/17.jpg" alt="校园活动">
+    <p class="caption">IT中国大课，感受华科计算机人的使命担当</p>
+</div>
+
+</body>
+</html>

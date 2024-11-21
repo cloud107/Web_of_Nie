@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习之旅</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+        }
+
+        /* 返回按钮样式 */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05); /* 放大图片 */
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="back-button">返回首页</a>
+    <h1>学习之旅</h1>
+    <p>探索不同的学习资源，开启成长之路</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="../image/13.jpg" alt="图片1">
+        <h3>微积分</h3>
+        <p>一生之敌</p>
+    </div>
+    <div class="card">
+        <img src="../image/19.jpg" alt="图片2">
+        <h3>C语言</h3>
+        <p>第一门语言课程</p>
+    </div>
+    <div class="card">
+        <img src="../image/20.jpg" alt="图片3">
+        <h3>线性代数</h3>
+        <p>老师很有趣，但线代很难。</p>
+    </div>
+    <div class="card">
+        <img src="../image/21.jpg" alt="图片4">
+        <h3>IT中国</h3>
+        <p>了解计算机原理，通晓计算机史</p>
+    </div>
+</div>
+
+</body>
+</html>

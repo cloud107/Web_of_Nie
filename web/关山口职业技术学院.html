@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关山口职业技术学院</title>
+    <style>
+        /* 设置基本的布局 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            flex: 1;  /* 上部分占1 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('../image/7.png');  /* 设置背景图为 ../7.png */
+            background-size: cover;  /* 背景图覆盖整个区域 */
+            background-position: center; /* 背景图居中显示 */
+            padding: 10px 0;  /* 添加一些上下的内边距来控制头部高度 */
+        }
+
+        .content {
+            flex: 8;  /* 中部分占8 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;  /* 让内容顶部对齐 */
+            position: relative;
+            padding-top: 50px;  /* 添加一些上边距，将文字移到顶部 */
+            font-size: 24px;
+            color: white;  /* 设置文字颜色为白色 */
+            text-align: center;  /* 使文字水平居中 */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 使用图片作为背景并保持清晰 */
+        .content img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持图片的完整性，裁剪以适应容器 */
+            z-index: -1; /* 使图片位于文本下方 */
+        }
+
+        .footer {
+            flex: 1;  /* 下部分占1 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            position: relative;
+        }
+
+        /* 图片的样式 */
+        .header img {
+            max-width: 150px;  /* 图片最大宽度为150px，可以根据需要调整 */
+            max-height: 150px; /* 图片最大高度为150px，保持宽高一致 */
+            width: 100%;       /* 确保图片宽度自适应 */
+            height: 100%;      /* 确保图片高度自适应 */
+            border-radius: 50%; /* 设置圆形 */
+            object-fit: cover; /* 确保图片裁剪为圆形时不失真 */
+        }
+
+        /* 返回按钮样式 */
+        .back-button {
+            position: absolute;
+            left: 20px;  /* 左边距 */
+            top: 20px;   /* 上边距 */
+            padding: 10px 20px;
+            background-color: #ffb5a7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #ff8c6d;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- 在头部区域居中显示圆形图片 -->
+    <img src="../image/4.png" alt="关山口职业技术学院">
+</div>
+
+<div class="content">
+    <!-- 在中部区域作为背景的图片 -->
+    <img src="../image/8.png" alt="背景图片">
+    全湖北唯一的高职高专
+</div>
+
+<div class="footer">
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="window.history.back()">返回</button>
+    <div>版权所有 © 关山口职业技术学院</div>
+</div>
+
+</body>
+</html>
